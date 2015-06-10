@@ -27,14 +27,15 @@ KIOSK INSTALLATION BRIEF SUMMARY:
 - configure network for static IP address
 - create user kiosk
 - configure kiosk mode i.e. for Ubuntu https://thepcspy.com/read/converting-ubuntu-desktop-to-kiosk/
-- use FireFox + grab-and-drag + R-kiosk instead of chrome (refer to _kiosk_opt_sample/kiosk.sh)
+- use FireFox + grab-and-drag + R-kiosk instead of chrome (refer to /_kiosk_opt_sample/kiosk.sh)
 - configure apache/nginx virtual host (default /var/www)
 - copy this repo files i.e. via git clone
 - create kiosk SQL user with basic CRUD permissions 
 - import database from _database/kiosk-default.sql
+- change password in /config/db_config.php
 - test if UI works (CLI commands: start kiosk, stop kiosk)
 - test if CMS works: open [kiosk ip]/admin in your browser. Default credentials are: admin/admin.
-- remove _database and _kiosk_opt_sample from your installation
+- remove /_database and /_kiosk_opt_sample from your installation
 - harden access to admin part with SSL if necessery
 
 AUTHOR:
