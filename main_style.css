@@ -1,0 +1,209 @@
+@charset "utf-8";
+/*viewport section*/
+@-ms-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+*{
+    -webkit-user-select:none;
+    -webkit-touch-callout:none;
+}
+
+/* Default CSS Document */
+
+/* Global */
+body, html {
+	margin:0px;
+	padding:0px;
+	background: #FFF;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000;
+}
+
+html { overflow-y: hidden;}
+* { overflow: hidden; cursor:_none;}
+
+/*general html elements styles*/
+a{outline: none;}
+table{width: 100%;}
+img{max-width: 100%;}
+h1{font-size: 36px; color: maroon;}
+h2{font-size:22px; color: maroon;}
+
+/*main layout section*/
+#header,#content,#footer
+{	width: 100%;
+	display: block;
+	overflow: hidden;
+	box-sizing: border-box;
+	 -moz-box-sizing: border-box; /*Firefox 1-3*/
+    -webkit-box-sizing: border-box; /* Safari */
+}
+#header
+{ background: #FFF8DE;
+}
+
+.main-text{	color:#222;}
+.main-container{	position:absolute;
+	top:114px;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#fff;
+}
+.header-pad{	height:20px;
+	background-color:#fff;
+}
+
+.main-text-container a{   color: maroon;}
+
+.class_button{
+	color: white;
+	display: block;
+	font-size: 36px;
+	height: 100px;
+	width: 100px;
+	line-height:100px;
+	text-align: center;
+	text-decoration: none!important;
+}
+
+.big_button{	background: navy;
+	color: white;
+	display: block;
+	font-size: 36px;
+	height: 100px;
+	line-height:100px;
+	text-align: center;
+	text-decoration: none!important;
+}
+.big_button.active{	background: maroon;
+	color: white;
+}
+
+.huge_button{
+	color: white;
+	display: block;
+	font-size: 36px;
+	height: 160px;
+	line-height:160px;
+	text-align: center;
+	text-decoration: none!important;
+}
+.announcements-container{	font-size:22px;
+	line-height:32px;
+}
+
+.announcements-container h2{	font-size:32px;}
+.schedule-weekday-container{	color:#222;
+	font-size:22px;
+	line-height:32px;}
+.schedule-outer-table>tbody>tr{	border: 1px dashed #444;}
+
+.schedule-changes-table>thead>tr>td{	color:white;
+	background-color: #488;
+	border-left: 1px dashed white;
+	text-align:center;
+}
+.schedule-changes-table>thead>tr>td:first-child{    border-left: 1px solid #488;}
+.schedule-changes-table>tbody>tr>td{
+	border-left: 1px dashed #444;
+	border-right: 1px dashed #444;
+	border-bottom: 1px dashed #444;/**/
+	padding-left:5px;
+}
+.schedule-changes-stroke{	background: url('files/images/_system/strike.png');
+  	background-repeat: repeat-x;
+  	background-position: center;
+  	text-decoration:none;}
+
+.schedule-changes-none{	color:#06f;
+	font-size: 170px;
+}
+.schedule-changes-date{
+	color:#06f;
+	font-size: 26px;
+}
+.schedule-changes-class{
+	color:#222;
+	font-size: 26px;
+}
+.schedule-changes-class span{	color:#222;
+	font-size: 22px;
+}
+.schedule-teacher-change-subject{ 	color:#608;
+	background-color: #CDC;}
+.schedule-teacher-add-subject{  	color:#608;
+	background-color: #fcc;}
+
+.weekday{	color: maroon;}
+
+.teacher_button{	color: white;
+	display: block;
+	font-size: 36px;
+	height: 60px;
+	line-height:60px;
+	text-align: left;
+	padding-left:20px;
+	text-decoration: none!important;}
+
+.news-date{	color:#06f;}
+.news-text{	font-size:22px;
+	line-height:32px;
+}
+.news-fgal img{    padding-top:5px;}
+
+.pdf-link{	width:100%	float:left;
+	color:#c33;
+	line-height:64px;
+}
+.pdf-link img{
+	padding-right: 20px;
+	vertical-align:middle;
+}
+.fullscreen-container{	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background: black;
+    z-index:10;
+    display:none;
+/*   	opacity: 0.5;/**/}
+.pdf-close{
+	display: block;
+	background: red;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	height: 32px;
+	width: 200px;
+	color:white;
+	cursor:pointer;
+	font-size:22px;
+	line-height:32px;
+	text-align:center;
+}
+.nav-back{
+	display: block;
+	background: navy;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	z-index: 900;
+	height: 102px;
+	width: 102px;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 72px;
+	line-height: 102px;
+	text-align: center;
+	/*border-bottom-left-radius: 35px;
+	border-top-left-radius: 35px;/**/
+}

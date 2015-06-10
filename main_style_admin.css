@@ -1,0 +1,227 @@
+@charset "utf-8";
+/*viewport section*/
+@-ms-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+/* Default CSS Document */
+
+/* Global */
+body, html {
+	margin:0px;
+	padding:0px;
+	background: #FFF;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #222;
+}
+
+html { overflow-y: visible;}/**/
+
+body {background-color: #111;}
+
+/*general html elements styles*/
+a
+{
+	outline: none;
+}
+
+table
+{	width: 100%;}
+img
+{
+ max-width: 100%;
+}
+h1
+{
+ font-size: 36px;
+}
+
+h2
+{
+ font-size:22px; color: #fea;}
+
+/*main layout section*/
+#lpad
+{// display: table; max-width:1000px;
+ margin: 0px auto;
+}
+
+#header,#content,#footer
+{	width: 100%;
+	display: block;
+	overflow: hidden;
+	box-sizing: border-box;
+	 -moz-box-sizing: border-box; /*Firefox 1-3*/
+    -webkit-box-sizing: border-box; /* Safari */
+}
+#header
+{ background: #FFF8DE;
+ display: table;
+}
+
+.main-text-container a{   color: #fea;}
+
+.class_button{
+	background: red;
+	color: white;
+	display: block;
+	font-size: 36px;
+	height: 100px;
+	width: 100px;
+	line-height:100px;
+	text-align: center;
+	text-decoration: none!important;
+}
+
+.big_button{	background: navy;
+	color: white;
+	display: block;
+	font-size: 36px;
+	height: 100px;
+	line-height:100px;
+	text-align: center;
+	text-decoration: none!important;
+}
+.big_button.active{	background: #fea;
+	color: navy;
+}
+
+.huge_button{
+	color: white;
+	display: block;
+	font-size: 36px;
+	height: 220px;
+	line-height:220px;
+	text-align: center;
+	text-decoration: none!important;
+}
+
+
+.announcements-container{	/*background: white;
+	color:#222;/**/
+	font-size:22px;
+	line-height:32px;
+}
+
+.announcements-container h2{	font-size:32px;}
+.schedule-weekday-container{	color:#222;
+	font-size:22px;
+	line-height:32px;}
+.schedule-outer-table>tbody>tr{	border: 1px dashed #444;}
+.weekday{	color: white;}
+
+.teacher_button{	color: white;
+	display: block;
+	font-size: 36px;
+	height: 60px;
+	line-height:60px;
+	text-align: left;
+	padding-left:20px;
+	text-decoration: none!important;}
+
+.news-text{	font-size:22px;
+	line-height:32px;
+}
+.news-fgal img{    padding-top:5px;}
+.admin-container  {	font-size:22px;
+	line-height:32px;
+	color:white;}
+.admin-container h1{	padding-bottom:20px;}
+
+.admin-container select{	background-color: white;
+	color: black;
+	font-size:16px;
+	line-height:20px;}
+.admin-container input[type="file"]{	color: #fea;
+	font-size:22px;
+	line-height:32px;}
+.admin-container input[type="text"]{
+	background-color: white;
+	color: black;
+	font-size:16px;
+	line-height:20px;
+}
+.admin-container input[type="password"]{
+	background-color: white;
+	color: black;
+	font-size:16px;
+	line-height:20px;
+}
+
+/*.admin-container input[type="submit"]{
+	background: green;
+	font-size:22px;
+	line-height:32px;
+	color: white;
+	border:none;
+}/**/
+
+
+.admin-table{
+	background-color: #eee;
+}
+
+.admin-table>thead>tr>th{
+	border: 1px solid #aaa;
+	color:#222;
+	padding:10px;
+	background-color:#FFF8DE;
+}
+.admin-table td{	border: 1px solid #aaa;
+	color:#222;
+	padding:10px;}
+
+.admin-confirm-button{	border: 1px solid #FFF;
+	background-color: #FFF8DE ;
+	width: 200px;
+	display: inline-block;
+	font-size: 22px;
+	line-height: 32px;
+	padding:4px;
+	text-decoration:none;
+	text-align:center;
+	cursor:pointer;}
+.pdf-link{	width:100%	float:left;
+	color:#c33;
+	line-height:64px;
+}
+.pdf-link img{
+	padding-right: 20px;
+	vertical-align:middle;
+}
+.fullscreen-container{	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background: black;
+    z-index:10;
+    display:none;
+/*   	opacity: 0.5;/**/}
+.pdf-close{
+	display: block;
+	background: red;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	height: 32px;
+	width: 200px;
+	color:white;
+	cursor:pointer;
+	font-size:22px;
+	line-height:32px;
+	text-align:center;
+}
+
+.error-small{
+	padding-top:20px;	font-size: 14px;
+	color: #fea;
+	line-height: 16px;}
+
+.error-text{	color: #f77;
+}

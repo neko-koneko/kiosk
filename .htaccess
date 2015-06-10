@@ -1,0 +1,20 @@
+php_value register_globals "off"
+AddType application/pdf .pdf
+RewriteEngine on
+RewriteBase /kiosk/
+Options +FollowSymlinks
+ErrorDocument 404 /kiosk/
+ErrorDocument 500 /kiosk/
+
+RewriteRule ^.htaccess$ - [F]
+
+<FilesMatch "\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+<FilesMatch "index\.php$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+RewriteRule ^([a-zA-Z0-9_/-]*)$ index.php
