@@ -1,7 +1,7 @@
 <?php
 session_start();
 //error_reporting(E_NONE);
-error_reporting(E_ALL);
+error_reporting(E_ALL && ~E_NOTICE && ~E_STRICT && E_DEPRECATED);
 header("Content-type: text/html; charset=UTF-8");
 header("Expires: Mon, 23 May 1995 02:00:00 GMT");
 header("Last-Modified: ".gmdate("D, d M Y H:i:s")." GMT");
@@ -45,13 +45,15 @@ $base_url_path = mb_substr( $base_url_components['path'],1);
 
 $main_request  = mb_substr( $_SERVER['REQUEST_URI'],1);
 
-if (mb_strpos($main_request,$base_url_path)===0)
+if (@mb_strpos($main_request,$base_url_path)===0)
 {
-  $main_request = mb_substr($main_request,mb_strlen($base_url_path) );
-  $main_request = reset(explode('?',$main_request));
+    $main_request = mb_substr($main_request,mb_strlen($base_url_path));
+    $request = explode('?',$main_request);
+    $main_request = reset($request);
 }
 
-$main_request = reset(explode('?',$main_request));
+$request = explode('?',$main_request);
+$main_request = reset($request);
 $main_request_array = array_filter(explode('/',$main_request,10));
 
 $controller_path = $main_request_array[0];
