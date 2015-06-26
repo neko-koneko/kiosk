@@ -45,8 +45,6 @@ $base_url_path = mb_substr( $base_url_components['path'],1);
 
 $main_request  = mb_substr( $_SERVER['REQUEST_URI'],1);
 
-//echo 'mr='.$main_request.' base_url='.$base_url_path.' base ='.$base; print_r($_SERVER); die;
-
 if (mb_strpos($main_request,$base_url_path)===0)
 {
   $main_request = mb_substr($main_request,mb_strlen($base_url_path) );
@@ -55,8 +53,6 @@ if (mb_strpos($main_request,$base_url_path)===0)
 
 $main_request = reset(explode('?',$main_request));
 $main_request_array = array_filter(explode('/',$main_request,10));
-
-//print_r($main_request_array);die;
 
 $controller_path = $main_request_array[0];
 
