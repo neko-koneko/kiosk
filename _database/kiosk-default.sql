@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `admin_users` (
   `login` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `announcements` (
   `title` varchar(255) NOT NULL,
   `text` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `articles` (
   `text` text NOT NULL,
   `available` set('Y','N') NOT NULL DEFAULT 'Y',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `ord` int(10) NOT NULL,
   `available` set('Y','N') NOT NULL DEFAULT 'Y',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -116,7 +116,7 @@ CREATE TABLE IF NOT EXISTS `schedule` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `class_num` (`class_num`,`class_letter`,`day_of_week`,`time_slot`,`group_id`),
   KEY `teacher_name` (`teacher_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=58198 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -139,4 +139,4 @@ CREATE TABLE IF NOT EXISTS `schedule_changes` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `class_num` (`class_num`,`class_letter`,`date`,`time_slot`,`group_id`),
   KEY `teacher_name` (`teacher_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=470 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
