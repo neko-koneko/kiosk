@@ -4,18 +4,20 @@ Contains kiosk UI and CMS
 
 Tailor-made for http://gym7.ru/
 
-Kiosk UI has: 
- - customizable single-level main menu, 
+Kiosk UI has:
+
+ - customizable single-level main menu
  - articles (main html entities)
  - announcements
  - news
  - schedule page for students and teachers
 
 
-CMS includes: 
+CMS includes:
+
  - Drag'n'Drop menu editor
- - WISIWIG-editor (CKeditor) for announcements and articles with direct image and pdf upload
- - custom parser implementation for loading and processing of news from scool's site http://gym7.ru/ site
+ - WYSIWIG-editor (CKeditor) for announcements and articles with direct image and pdf upload
+ - custom parser implementation for loading and processing of news from school's site http://gym7.ru/ site
  - schedule files import from "Profil" software product http://www.time-tabling.com/profil.php
  - cryptographically strong auth and password storage mechanism (single admin user)
 

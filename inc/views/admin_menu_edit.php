@@ -14,9 +14,11 @@ $base = $base.'admin/';
 
 			echo '<div class="fleft w100">';
 
-	 		if (empty($item)){				echo '<h1 class="fleft w100">Новый пункт меню</h1>';
+	 		if (empty($item)){
+				echo '<h1 class="fleft w100">Новый пункт меню</h1>';
 				echo '<form style="padding-top:40px;" enctype="multipart/form-data" action="'.$base.$main_request_array[1].'/savenew" method="POST">';
-	 		}else{				echo '<h1 class="fleft w100">Редактировать пункт меню</h1>';
+	 		}else{
+				echo '<h1 class="fleft w100">Редактировать пункт меню</h1>';
 				echo '<form style="padding-top:40px;" enctype="multipart/form-data" action="'.$base.$main_request_array[1].'/save/'.$item['id'].'" method="POST">';
             }
 
@@ -35,11 +37,12 @@ $base = $base.'admin/';
             echo '<option value="schedule">Расписание</option>';
             echo '<option value="news">Новости</option>';
             echo '<option value="announcements">Объявления</option>';
-            echo '<option value="">------------------------------------------------ СТАТЬИ ------------------------------------------------</option>';
+            echo '<optgroup label="Статьи">';
  	           foreach ($articles as $article){
 	           		echo '<option value="articles/'.$article['id'].'">'.$article['title'].'</option>';
 	           }
-
+            echo '</optgroup>';
+        
             echo '</select>';
 			echo '</div>';
 
